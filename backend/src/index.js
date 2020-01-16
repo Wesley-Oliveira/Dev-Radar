@@ -2,6 +2,7 @@
 // Importando express, mongoose e routes
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const routes = require('./routes');
 
 const app = express();
@@ -12,6 +13,8 @@ mongoose.connect('mongodb+srv://admin:admin123@cluster0-gke9r.mongodb.net/devrad
     useUnifiedTopology: true,
 });
 
+// Para liberar o acesso externo a todo tipo de aplicação
+app.use(cors());
 // Para o express entender que será utilizado JSON
 app.use(express.json());
 // Para poder utilizar as rotas exportadas

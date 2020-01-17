@@ -3,9 +3,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const http = require('http');
 const routes = require('./routes');
+const { setupWebsocket } = require('./websocket');
 
 const app = express();
+const server = http.Server(app);
+
+setupWebsocket(server);
 
 // Criando conexão com o banco de dados mongo
 mongoose.connect('mongodb+srv://admin:admin123@cluster0-gke9r.mongodb.net/devradar?retryWrites=true&w=majority', {
@@ -21,4 +26,4 @@ app.use(express.json());
 app.use(routes);
 
 // Selecionando porta
-app.listen(3333);
+server.listen(3333);

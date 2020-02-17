@@ -1,9 +1,8 @@
 # Dev-Radar
-Projeto criado durante a semana OmniStack 10, criado para localizar desenvolvedores próximos ao usuário que se interessam por determinada tecnologia. Fazendo uso de geolocalização, semelhante ao Uber e Waze.
+    Project created during the week OmniStack 10, created to find developers close to the user who are interested in a certain technology. Using geolocation, similar to Uber and Waze.
 
 
-Execução após configurações de yarn e expo:
-
-Para execução do backend: yarn dev
-Para execução do frontend: yarn start
-Para execução da aplicação mobile: expo start
+# Execution after yarn and expo configurations
+    For backend execution: yarn dev
+    For frontend execution: yarn start
+    For application mobile execution: expo start
